@@ -942,13 +942,11 @@ header a {
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+@media only screen and (min-width: 1158px) {
   .introduction {
     padding: 112px 136px;
   }
-}
 
-@media only screen and (min-width: 1280px) {
   .header {
     height: 72px;
     padding: 22.5px 156px;
