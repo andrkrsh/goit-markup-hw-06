@@ -773,6 +773,11 @@ header a {
 
   .introduction {
     padding: 72px 52px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg.jpg);
   }
 
   .introduction-title {
