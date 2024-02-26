@@ -88,7 +88,7 @@ address {
 
 .container {
   margin: 0 auto;
-  width: 100%;
+  max-width: 320px;
 }
 
 .header {
@@ -102,6 +102,7 @@ address {
 
 .header-container {
   display: flex;
+  width: 100%;
 }
 
 .header-menu {
@@ -121,13 +122,6 @@ address {
   text-decoration: none;
 }
 
-.icon-burger,
-.icon-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 2;
-}
 .icon-close {
   border-radius: 100%;
   background-color: #e7e9fc;
@@ -135,6 +129,7 @@ address {
   height: 24px;
   fill: #2e2f42;
   padding: 8px;
+  z-index: 2;
 }
 
 .header-logo-span {
@@ -180,7 +175,7 @@ header a {
 
 .header-social-menu {
   display: flex;
-  justify-content: space-between;
+  gap: 40px;
 }
 
 .introduction {
@@ -253,18 +248,13 @@ header a {
   gap: 72px;
 }
 
-/* ========= виглядає краще, ніж як треба в дз
-
-.section-list-title {
-  margin: 8px 0;
-}
-*/
 .section-list-title {
   margin-bottom: 8px;
   text-align: center;
   font-size: 36px;
   letter-spacing: 0.72px;
   text-transform: capitalize;
+  font-weight: 700;
 }
 
 .svg-container {
@@ -361,6 +351,7 @@ header a {
   flex-wrap: wrap;
   column-gap: 24px;
   justify-content: center;
+  row-gap: 48px;
 }
 
 .portfolio-list-item {
@@ -467,6 +458,7 @@ header a {
   margin-bottom: 16px;
   font-weight: 500;
   color: #ffffff;
+  text-align: center;
 }
 
 .subscribe-form {
@@ -730,15 +722,14 @@ header a {
     position: fixed;
     width: 100%;
     height: 100vh;
-    padding: 0 16px;
-    display: flex;
-    flex-direction: column;
     pointer-events: none;
     clip-path: circle(100px at 90% -10%);
     -webkit-clip-path: circle(100px at 90% -20%);
     background-color: #f4f4fd;
     transition: all 1s ease-out;
     z-index: 1;
+    display: flex;
+    justify-content: center;
   }
 
   .mobile-menu-container.open {
@@ -747,24 +738,39 @@ header a {
     pointer-events: all;
   }
 
+  .mobile-info-container {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 100vh;
+  }
+
   .header-nav {
     height: 200px;
     margin-top: 72px;
+    margin-bottom: auto;
   }
 
   .header-menu-link {
     font-size: 36px;
   }
 
-  .header .logo {
-    position: absolute;
-    top: 17.5px;
-    left: 16px;
+  .logo-container {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    margin: 0 auto;
   }
 
   .adress {
     font-style: normal;
-    margin: 168px 0 48px;
+  }
+
+  .header-social {
+    margin: 48px 0 40px;
   }
 
   .adress-menu {
@@ -786,15 +792,20 @@ header a {
     line-height: 1.11em;
     letter-spacing: 0.72px;
     margin-bottom: 72px;
+    max-width: 216px;
   }
 
   .section-list {
-    gap: 24px;
+    gap: 72px;
     flex-wrap: wrap;
   }
 
   .section-list-item {
     width: 100%;
+  }
+
+  .section-list-text {
+    font-weight: 500;
   }
 
   .team {
@@ -823,6 +834,10 @@ header a {
 }
 
 @media only screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+
   .icon-burger {
     display: none;
   }
@@ -833,7 +848,7 @@ header a {
     justify-content: space-around;
   }
 
-  .mobile-menu-container {
+  .mobile-info-container {
     display: flex;
     gap: 120px;
     margin-left: 120px;
@@ -868,6 +883,7 @@ header a {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.16em;
+    gap: 12px;
   }
 
   .active::after {
@@ -922,6 +938,7 @@ header a {
     flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
+    row-gap: 64px;
   }
 
   .portfolio-list {
@@ -929,51 +946,63 @@ header a {
   }
 
   .footer {
-    padding: 97.5px 108px;
+    padding: 100px 0;
   }
 
   .footer-container {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     row-gap: 72px;
   }
 
   .subscribe-form {
     flex-direction: row;
-    gap: 55px;
+    gap: 24px;
+  }
+
+  .subscribe-title {
+    text-align: left;
   }
 }
 
 @media only screen and (min-width: 1158px) {
+  section {
+    padding: 120px 0;
+  }
+
+  .container {
+    max-width: 1158px;
+  }
+
   .introduction {
-    padding: 112px 136px;
+    padding: 188px 0;
   }
 
   .header {
     height: 72px;
-    padding: 22.5px 156px;
   }
 
   .header-container {
     gap: 76px;
-    padding: 0;
+    padding: 0 15px;
+    justify-content: center;
   }
 
   .adress-menu-link {
     font-size: 16px;
   }
 
-  .mobile-menu-container {
+  .mobile-info-container {
     margin-left: 0;
-    justify-content: space-between;
-    width: 100%;
+    flex-grow: 1;
   }
 
   .introduction-title {
     margin-bottom: 48px;
+    width: 496px;
   }
 
   .svg-container {
@@ -981,7 +1010,11 @@ header a {
   }
 
   .section-list-item {
-    width: calc((100% - 76px) / 4);
+    width: calc((100% - 72px) / 4);
+  }
+
+  .section-list-title {
+    font-size: 20px;
   }
 
   .adress-menu {
@@ -993,8 +1026,17 @@ header a {
     bottom: -100%;
   }
 
-  .footer {
-    padding: 101.5px 156px;
+  .footer-text {
+    width: 264px;
+  }
+
+  .footer-container {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .footer-social {
+    margin: 0 80px 0 120px;
   }
 }
 
@@ -1008,11 +1050,6 @@ header a {
   }
 
   .footer-container {
-    gap: 0;
     flex-wrap: nowrap;
-  }
-
-  .footer-social {
-    margin: 0 80px 0 120px;
   }
 }
