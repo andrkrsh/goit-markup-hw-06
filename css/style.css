@@ -173,6 +173,10 @@ header a {
   color: #404bbf;
 }
 
+.adress-tel {
+  color: #4d5ae5;
+}
+
 .header-social-menu {
   display: flex;
   gap: 40px;
@@ -842,6 +846,10 @@ header a {
     display: none;
   }
 
+  .header {
+    height: 72px;
+  }
+
   .header-container {
     align-items: center;
     padding: 0 16px;
@@ -884,6 +892,11 @@ header a {
     font-weight: 400;
     line-height: 1.16em;
     gap: 12px;
+    flex-direction: column-reverse;
+  }
+
+  .adress-tel {
+    color: #434455;
   }
 
   .active::after {
@@ -897,7 +910,7 @@ header a {
     width: 0;
     transition: 0.3s;
     width: 100%;
-    bottom: -16px;
+    bottom: -100%;
   }
 
   .header-menu-link:hover::after {
@@ -954,8 +967,8 @@ header a {
     gap: 24px;
     flex-wrap: wrap;
     align-items: baseline;
-    justify-content: center;
     row-gap: 72px;
+    max-width: 496px;
   }
 
   .subscribe-form {
@@ -974,7 +987,7 @@ header a {
   }
 
   .container {
-    max-width: 1158px;
+    max-width: 1440px;
   }
 
   .introduction {
@@ -1018,12 +1031,13 @@ header a {
   }
 
   .adress-menu {
-    flex-direction: row;
+    flex-direction: row-reverse;
     gap: 40px;
   }
 
-  .active::after {
-    bottom: -100%;
+  .footer {
+    display: flex;
+    justify-content: center;
   }
 
   .footer-text {
@@ -1033,23 +1047,10 @@ header a {
   .footer-container {
     flex-wrap: nowrap;
     gap: 0;
+    margin: 0;
   }
 
   .footer-social {
     margin: 0 80px 0 120px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .introduction {
-    padding: 188px 472px;
-  }
-
-  .section {
-    padding: 120px 156px;
-  }
-
-  .footer-container {
-    flex-wrap: nowrap;
   }
 }
