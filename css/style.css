@@ -143,7 +143,7 @@ header a {
 
 .header-menu-link {
   color: #2e2f42;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
   display: block;
   position: relative;
@@ -161,6 +161,12 @@ header a {
 .adress-menu {
   display: flex;
   flex-direction: column;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.4px;
 }
 
 .adress-menu-link {
@@ -671,6 +677,9 @@ header a {
   letter-spacing: 0.04em;
   color: #8e8f99;
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
 }
 
 .privacy-span {
@@ -685,6 +694,7 @@ header a {
   align-items: center;
   justify-content: center;
   fill: transparent;
+  flex-shrink: 0;
 }
 
 .policy-link {
@@ -729,7 +739,6 @@ header a {
     pointer-events: none;
     clip-path: circle(100px at 90% -10%);
     -webkit-clip-path: circle(100px at 90% -20%);
-    background-color: #f4f4fd;
     transition: all 1s ease-out;
     z-index: 1;
     display: flex;
@@ -748,6 +757,7 @@ header a {
     flex-direction: column;
     width: 320px;
     height: 100vh;
+    background-color: white;
   }
 
   .header-nav {
@@ -782,7 +792,7 @@ header a {
   }
 
   .introduction {
-    padding: 72px 52px;
+    padding: 72px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -813,7 +823,7 @@ header a {
   }
 
   .team {
-    padding: 96px 28px;
+    padding: 96px 0;
   }
 
   .team-list {
@@ -839,7 +849,7 @@ header a {
 
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
   }
 
   .icon-burger {
@@ -859,7 +869,6 @@ header a {
   .mobile-info-container {
     display: flex;
     gap: 120px;
-    margin-left: 120px;
     align-items: center;
   }
 
@@ -918,7 +927,7 @@ header a {
   }
 
   .introduction {
-    padding: 112px 136px;
+    padding: 112px 0;
   }
 
   .introduction-title {
@@ -931,7 +940,7 @@ header a {
   .section-list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px 24px;
   }
 
   .section-list-item {
@@ -943,7 +952,7 @@ header a {
   }
 
   .team {
-    padding: 96px 108px;
+    padding: 96px 0;
   }
 
   .team-list {
@@ -968,7 +977,7 @@ header a {
     flex-wrap: wrap;
     align-items: baseline;
     row-gap: 72px;
-    max-width: 496px;
+    max-width: 552px;
   }
 
   .subscribe-form {
@@ -979,6 +988,10 @@ header a {
   .subscribe-title {
     text-align: left;
   }
+
+  .footer-social-text {
+    text-align: left;
+  }
 }
 
 @media only screen and (min-width: 1158px) {
@@ -987,7 +1000,7 @@ header a {
   }
 
   .container {
-    max-width: 1440px;
+    max-width: 1158px;
   }
 
   .introduction {
